@@ -3,7 +3,7 @@
 
 void my_fill(int *tab, int len)
 {
-    for (int i = 0; i <= len; i++) {
+    for (int i = 0; i < len; i++) {
         tab[i] = i;
     }
 }

@@ -5,7 +5,7 @@ long my_sum(long *tab, int len)
 {
     long sum = 0;
 
-    for (int i = 0; i <= len; i++) {
+    for (int i = 0; i < len; i++) {
         sum += tab[i];
     }
     return sum;

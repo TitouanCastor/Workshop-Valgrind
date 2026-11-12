@@ -1,12 +1,17 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
 void my_strcpy(char *dest, const char *src)
 {
-    for (int i = 0; src[i] != '\0'; i++) {
+    int i = 0;
+
+    while (src[i] != '\0') {
         dest[i] = src[i];
+        i++;
     }
+    dest[i] = '\0';
 }
 
 void my_putstr(char *str)
@@ -22,7 +27,7 @@ void my_putstr(char *str)
 int main(void)
 {
     char *str = strdup("valgrind\n");
-    char *result = malloc(sizeof(char) * strlen(str));
+    char *result = malloc(sizeof(char) * (strlen(str) + 1));
 
     my_strcpy(result, str);
     my_putstr(result);

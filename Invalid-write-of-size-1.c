@@ -26,7 +26,7 @@ void my_putstr(char *str)
 int main(void)
 {
     char *str = strdup("valgrind\n");
-    char *result = malloc(sizeof(char) * strlen(str));
+    char *result = malloc(sizeof(char) * (strlen(str) + 1));
 
     my_strcpy(result, str);
     my_putstr(result);
